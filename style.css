@@ -1,0 +1,75 @@
+body {
+
+}
+
+ul {
+  list-style: none;
+}
+.stopwatch {
+  width: 90%;
+  max-width: 440px;
+  margin: 0 auto;
+  background: #333;
+  padding: 3rem 0;
+  border-radius: 10px;
+  box-shadow: inset 0 2px rgba(255, 255, 255, .75), 3px 3px 1px 0 rgba(0, 0, 0, .75);
+}
+
+.display, .button-holder {
+  width: 90%;
+  max-width: 220px;
+  text-align: center;
+}
+
+.display-numbers, button {
+  font-family: monospace;
+}
+.display {
+  background-color: white;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 0;
+}
+.display-numbers {
+  font-size: 3rem;
+  padding: 0 5%;
+  display: inline-block;
+  width: 22%;
+  height: 4rem;
+  line-height: 4rem;
+  position: relative;
+    vertical-align: middle;
+}
+
+.display-numbers:not(:last-child):after{
+  content: ':';
+  position: absolute;
+  right: -17%;
+  top: -4%;
+}
+
+.button-holder {
+  margin: 2rem auto 0 auto;
+}
+
+button {
+  height: 3rem;
+  font-size: 1.75rem;
+  width: 40%;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.start-button {
+  margin-right: 10%;
+}
+.start-button:hover{
+  background-color: green;
+  color: white;
+}
+.clear-button {
+}
+.clear-button:hover{
+  background-color: red;
+  color: white;
+}
