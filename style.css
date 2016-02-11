@@ -55,6 +55,7 @@ ul {
   height: 10rem;
   background-color: rgba(240, 240, 240, 1);
   text-align: center;
+  overflow-y: scroll;
 }
 .saved-times li span {
   display: inline-block;
