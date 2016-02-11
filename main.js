@@ -24,11 +24,21 @@
     }
   }
 
+  function getSubSeconds ( count ){
+    return leadingZeros( 2, ( count % 100) );
+  }
+  function getSeconds ( count ){
+    return leadingZeros( 2, (Math.floor(count / 100) % 60) ).slice(-2);
+  }
+  function getMinutes ( count ){
+    return leadingZeros( 2, (Math.floor(COUNTER / 3600) % 3600) ).slice(-2);
+  }
   function timeCheck(){
     COUNTER += 1;
-    var subSeconds = leadingZeros( 2, (COUNTER % 100) );
-    var seconds = leadingZeros( 2, (Math.floor(COUNTER / 100) % 60) ).slice(-2);
-    var minutes = leadingZeros( 2, (Math.floor(COUNTER / 3600) % 3600) ).slice(-2);
+    var subSeconds = getSubSeconds(COUNTER);
+    var seconds = getSeconds(COUNTER);
+    var minutes = getMinutes(COUNTER);
+
     //document.querySelector(".debug").innerHTML = COUNTER;
     document.querySelector(".sub-seconds").innerHTML = subSeconds;
     document.querySelector(".seconds").innerHTML = seconds;
@@ -72,18 +82,18 @@
 
   function lapClick(){
     //set total time string
-    var minTime = leadingZeros( 2, Math.floor(COUNTER / 6000) );
-    var secTime = leadingZeros( 2, Math.floor(COUNTER / 100) );
-    var subSecTime = leadingZeros( 2, (COUNTER % 100) );
+    var minTime = getMinutes(COUNTER);
+    var secTime = getSeconds(COUNTER);
+    var subSecTime = getSubSeconds(COUNTER);
     totalTime =  minTime + ' : ' + secTime + ' . ' + subSecTime;
     //get the difference between the last lap and this one
     var lapDiff = COUNTER - lastLapTotal;
     //set new total
     lastLapTotal = COUNTER;
     //set lap output string
-    var lapMin = leadingZeros( 2, Math.floor(lapDiff / 6000) );
-    var lapSec = leadingZeros( 2, Math.floor(lapDiff / 100) );
-    var lapSubSec = leadingZeros( 2, (lapDiff % 100) );
+    var lapMin = getMinutes(lapDiff);
+    var lapSec = getSeconds(lapDiff);
+    var lapSubSec = getSubSeconds(lapdiff);
     var lapTime = lapMin + ' : ' + lapSec + ' . ' + lapSubSec;
     //build output and append
     var newTime = '<li>';
