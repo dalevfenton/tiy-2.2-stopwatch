@@ -8,9 +8,9 @@
 <body>
   <section class="stopwatch">
     <ul class="display">
-      <li class="display-numbers hours" >00</li>
       <li class="display-numbers minutes" >00</li>
       <li class="display-numbers seconds" >00</li>
+      <li class="display-numbers sub-seconds" >00</li>
     </ul>
     <div class="saved-times">
       <ul>
@@ -19,31 +19,50 @@
         <li><span class="lap-number">01</span><span class="total-time" >04:20:19</span><span class="split-time" >4:20:19</span></li>
       </ul>
     </div>
-    <div class="button-holder-1">
+    <div id="button-holder-1">
       <button type="button" name="start-button" class="start-button">START</button>
     </div>
-    <div class="button-holder-2">
+    <div id="button-holder-2">
       <button type="button" name="resume-button" class="resume-button">RESUME</button>
       <button type="button" name="reset-button" class="reset-button">RESET</button>
     </div>
-    <div class="button-holder-3">
+    <div id="button-holder-3">
       <button type="button" name="stop-button" class="stop-button">STOP</button>
       <button type="button" name="lap-button" class="lap-button">LAP</button>
     </div>
   </section>
   <script type="text/javascript">
-      var coolStuff;
-      coolStuff = 10;
-      console.log ( coolStuff );
-      var myString = 'awesome';
-      console.log ( myString );
-      var sports = [ 'baseball', 'soccer'];
-      console.log (sports );
-      console.log (sports.length );
+    var startButton = document.querySelector('.start-button');
+    var resumeButton = document.querySelector('.resume-button');
+    var resetButton = document.querySelector('.reset-button');
+    var stopButton = document.querySelector('.stop-button');
+    var lapButton = document.querySelector('.lap-button');
 
-      sports.push( 'football', 'swimming');
-      console.log (sports );
-      console.log (sports.length );
+
+    function startClick(){
+      console.log( 'start button clicked');
+      //start timer & keep fields updated
+
+
+      //change to button layout 2
+    }
+    function resumeClick(){
+
+    }
+    function resetClick(){
+
+    }
+    function stopClick(){
+
+    }
+    function lapClick(){
+
+    }
+startButton.addEventListener( 'click', startClick );
+resumeButton.addEventListener( 'click', resumeClick );
+resetButton.addEventListener( 'click', resetClick );
+stopButton.addEventListener( 'click', stopClick );
+lapButton.addEventListener( 'click', lapClick );
 
   </script>
 </body>

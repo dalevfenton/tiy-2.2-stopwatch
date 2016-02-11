@@ -38,15 +38,17 @@ ul {
   vertical-align: middle;
 }
 .display-numbers:not(:last-child):after{
-  content: ':';
   position: absolute;
   top: -5%;
 }
+
 .display-numbers:first-child:after{
   left: 33%;
+  content: ':';
 }
 .display-numbers:nth-child(2):after{
   left: 66%;
+  content: '.';
 }
 
 .saved-times {
@@ -80,7 +82,6 @@ button {
   height: 3rem;
   font-size: 1.75rem;
   display: block;
-  background-color: green;
   color: white;
   font-weight: lighter;
 }
@@ -91,11 +92,15 @@ button {
   font-family: sans-serif;
 }
 .start-button {
-  width: 100%
+  width: 100%;
+  background-color: rgba(98, 193, 108, 1);
 }
 .start-button:hover{
-  background-color: green;
+  background-color: rgba(73, 145, 81, 1);
   color: white;
+}
+.start-button:active{
+  background-color: rgba(114, 225, 126, 1);
 }
 .clear-button {
 }
