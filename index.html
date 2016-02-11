@@ -21,8 +21,12 @@
     'use strict';
 
     var myStartButton;
-    myStartButton = document.querySelector();
-
+    myStartButton = document.querySelector('.start-button');
+    console.log(myStartButton);
+    function startButtonHandler() {
+      console.log("Hello World!");
+    }
+    myStartButton.addEventListener('click', startButtonHandler );
     // var coolStuff;
     // var amazonBox = [ 3, 'fruit', document ];
     // coolStuff = 10;
