@@ -1,5 +1,5 @@
 body {
-
+  font-family: sans-serif;
 }
 
 ul {
@@ -19,7 +19,7 @@ ul {
 }
 
 .display-numbers, button {
-  font-family: monospace;
+  /*font-family: monospace;*/
 }
 .display {
   background-color: white;
@@ -51,7 +51,26 @@ ul {
 
 .saved-times {
   height: 10rem;
-  background-color: rgba(233, 230, 191, .25);
+  background-color: rgba(240, 240, 240, 1);
+  text-align: center;
+}
+.saved-times li span {
+  display: inline-block;
+  padding: .5rem 0;
+  font-family: sans-serif;
+}
+.lap-number{
+  width: 20%;
+  color: rgba(0, 0, 150, 1);
+}
+.total-time, .split-time {
+  width: 35%;
+}
+.total-time{
+  color: gray;
+}
+.split-time{
+  color: black;
 }
 .button-holder {
   margin: 2rem auto 0 auto;
@@ -63,12 +82,16 @@ button {
   display: block;
   background-color: green;
   color: white;
+  font-weight: lighter;
 }
 .button-holder-2, .button-holder-3 {
   display: none;
 }
+.start-button, .resume-button, .reset-button, .lap-button, .stop-button {
+  font-family: sans-serif;
+}
 .start-button {
-  margin-right: 10%;
+  width: 100%
 }
 .start-button:hover{
   background-color: green;
