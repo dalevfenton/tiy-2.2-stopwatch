@@ -1,5 +1,11 @@
+html {
+  height: 100%;
+}
 body {
   font-family: sans-serif;
+  background-color: black;
+  background-image: linear-gradient( rgba(0, 0, 0, 1), rgba(75, 75, 75, 1));
+  height: 100%;
 }
 
 ul {
@@ -12,6 +18,8 @@ ul {
   width: 90%;
   max-width: 440px;
   margin: 0 auto;
+  position: relative;
+  top: 25%;
 }
 
 .display, .button-holder {
