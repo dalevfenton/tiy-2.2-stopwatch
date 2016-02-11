@@ -85,26 +85,47 @@ button {
   color: white;
   font-weight: lighter;
 }
-.button-holder-2, .button-holder-3 {
+#button-holder-2, #button-holder-3 {
   display: none;
 }
-.start-button, .resume-button, .reset-button, .lap-button, .stop-button {
-  font-family: sans-serif;
+.resume-button, .reset-button, .lap-button, .stop-button {
+  width: 50%;
+  display: block;
+  float: left;
 }
+
 .start-button {
   width: 100%;
+
+}
+
+/*green backgrounds*/
+.start-button, .resume-button{
   background-color: rgba(98, 193, 108, 1);
 }
-.start-button:hover{
+.start-button:hover, .resume-button:hover{
   background-color: rgba(73, 145, 81, 1);
-  color: white;
 }
-.start-button:active{
+.start-button:active, .resume-button:active{
   background-color: rgba(114, 225, 126, 1);
 }
-.clear-button {
+/*red background*/
+.stop-button, .clear-button{
+  background-color: rgba(190, 0, 0, 1);
 }
-.clear-button:hover{
-  background-color: red;
-  color: white;
+.stop-button:hover, .clear-button:hover{
+ background-color: rgba(255, 0, 0, 1);
+}
+.stop-button:active, .clear-button:active{
+  background-color: rgba(225, 114, 114, 1);
+}
+/*blue backgrounds*/
+.lap-button, .reset-button{
+  background-color: rgba(0, 21, 190, 1);
+}
+.lap-button:hover, .reset-button:hover{
+  background-color: rgba(0, 0, 255, 1);
+}
+.lap-button:active, .reset-button:active{
+  background-color: rgba(99, 114, 234, 1);
 }
