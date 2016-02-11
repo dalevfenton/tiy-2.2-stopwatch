@@ -6,12 +6,12 @@ ul {
   list-style: none;
   display: block;
   margin: 0;
+  padding: 0;
 }
 .stopwatch {
   width: 90%;
   max-width: 440px;
   margin: 0 auto;
-  background: #345;
 }
 
 .display, .button-holder {
@@ -51,8 +51,7 @@ ul {
 
 .saved-times {
   height: 10rem;
-  overflow: scroll;
-  background-color: rgba(233, 230, 191, 1);
+  background-color: rgba(233, 230, 191, .25);
 }
 .button-holder {
   margin: 2rem auto 0 auto;
