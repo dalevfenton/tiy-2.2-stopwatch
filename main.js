@@ -43,7 +43,7 @@
     document.querySelector(".sub-seconds").innerHTML = subSeconds;
     document.querySelector(".seconds").innerHTML = seconds;
     document.querySelector(".minutes").innerHTML = minutes;
-  };
+  }
 
   function startClick(){
     //start timer & keep fields updated
@@ -67,6 +67,7 @@
     document.querySelector(".sub-seconds").innerHTML = '00';
     document.querySelector(".seconds").innerHTML = '00';
     document.querySelector(".minutes").innerHTML = '00';
+    document.querySelector(".saved-times>ul").innerHTML = '';
     //change to button layout 2
     document.querySelector("#button-holder-2").style.display = 'none';
     document.querySelector("#button-holder-1").style.display = 'block';
@@ -93,7 +94,7 @@
     //set lap output string
     var lapMin = getMinutes(lapDiff);
     var lapSec = getSeconds(lapDiff);
-    var lapSubSec = getSubSeconds(lapdiff);
+    var lapSubSec = getSubSeconds(lapDiff);
     var lapTime = lapMin + ' : ' + lapSec + ' . ' + lapSubSec;
     //build output and append
     var newTime = '<li>';
@@ -101,7 +102,8 @@
     newTime += '<span class="total-time">'+ totalTime +'</span>';
     newTime += '<span class="split-time">'+ lapTime +'</span>';
     newTime += '</li>';
-    document.querySelector(".saved-times>ul").innerHTML += newTime;
+    var curHTML = document.querySelector(".saved-times>ul").innerHTML;
+    document.querySelector(".saved-times>ul").innerHTML = newTime + curHTML;
     //increment lap number
     curLap += 1;
   }
@@ -112,4 +114,4 @@ resumeButton.addEventListener( 'click', resumeClick );
 resetButton.addEventListener( 'click', resetClick );
 stopButton.addEventListener( 'click', stopClick );
 lapButton.addEventListener( 'click', lapClick );
-}())
+}());
