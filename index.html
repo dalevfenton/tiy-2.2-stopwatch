@@ -25,6 +25,9 @@
     console.log(myStartButton);
     function startButtonHandler() {
       console.log("Hello World!");
+      var startButton = document.querySelector('.start-button');
+      startButton.style.backgroundColor = 'red';
+      alert('I was clicked');
     }
     myStartButton.addEventListener('click', startButtonHandler );
     // var coolStuff;
