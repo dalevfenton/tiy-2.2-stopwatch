@@ -31,7 +31,7 @@
     return leadingZeros( 2, (Math.floor(count / 100) % 60) ).slice(-2);
   }
   function getMinutes ( count ){
-    return leadingZeros( 2, (Math.floor(COUNTER / 3600) % 3600) ).slice(-2);
+    return leadingZeros( 2, (Math.floor(count / 6000) % 3600) ).slice(-2);
   }
   function timeCheck(){
     COUNTER += 1;
